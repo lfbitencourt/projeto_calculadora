@@ -1,18 +1,19 @@
 #include<stdio.h>
+#include<math.h>
 
-void coleta_operandos(int qtd, int* num1, int* num2)
+void coleta_operandos(int qtd, float* num1, float* num2)
 {
     printf("Digite o primeiro operando:");
-    scanf("%d%*c", num1);
+    scanf("%f%*c", num1);
 
     if (qtd == 2)
     {
         printf("Digite o segundo operando:");
-        scanf("%d%*c", num2);
+        scanf("%f%*c", num2);
     }
 }
 
-int soma(int num1, int num2)
+float soma(float num1, float num2)
 {
     return num1 + num2;
 }
@@ -20,7 +21,7 @@ int soma(int num1, int num2)
 int main(void)
 {
     char op;
-    int num1, num2, res, num_op;
+    float num1, num2, res, num_op;
 
     while(1)
     {
@@ -42,8 +43,8 @@ int main(void)
             printf("Operacao nao suportada. Digita novamente");
         }
 
-        if (num_op == 2)
-            printf("%d %c %d = %d\n", num1, op, num2, res);
+         if (num_op == 2)
+            printf("%.2f %c %.2f = %.2f\n", num1, op, num2, res);
         
     }
 
