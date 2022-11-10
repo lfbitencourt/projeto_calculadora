@@ -17,6 +17,12 @@ int soma(int num1, int num2)
     return num1 + num2;
 }
 
+int subtracao(int num1, int num2)
+{
+    return num1 - num2;
+}
+
+
 int main(void)
 {
     char op;
@@ -34,6 +40,11 @@ int main(void)
             coleta_operandos(num_op, &num1, &num2);
             res = soma(num1, num2);
             break;
+            
+        case '-':
+            coleta_operandos(num_op, &num1, &num2);
+            res = subtracao(num1, num2);
+            break;      
                 
         case '0':
             return 0;
